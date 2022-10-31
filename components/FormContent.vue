@@ -65,7 +65,7 @@
           </v-row>
           <v-row>
             <v-col>
-              <div style="display:flex; flex-direction: row; justify-content:flex-start; align-items: center; box-shadow: 0px 0.5px 4px 0px rgba(0,0,0,0.55);; border-radius: 25px; height: 50px;">
+              <div class="phoneField">
                 <ValidationProvider style="width: 20%; margin-left: 10px;">
                   <select
                     v-model="submit"
@@ -155,26 +155,11 @@ import { extend } from 'vee-validate'
 import { required, email, alpha, min, numeric } from 'vee-validate/dist/rules.umd'
 import axios from 'axios'
 import generator from 'generate-password'
-extend('min', {
-  ...min,
-  message: 'Test'
-})
-extend('numeric', {
-  ...numeric,
-  message: 'Test'
-})
-extend('required', {
-  ...required,
-  message: 'This field is required'
-})
-extend('email', {
-  ...email,
-  message: 'Test'
-})
-extend('alpha', {
-  ...alpha,
-  message: '|Test'
-})
+extend('min', min)
+extend('numeric', numeric)
+extend('required', required)
+extend('email', email)
+extend('alpha', alpha)
 export default {
   components: { ValidationProvider },
   data () {
@@ -298,6 +283,15 @@ export default {
           margin-top: 15px;
           font-family: 'Playfair Display', serif;
           font-size: 15px;;
+      }
+      .phoneField {
+        display:flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;
+        box-shadow: 0px 0.5px 4px 0px rgba(0,0,0,0.55);
+        border-radius: 25px;
+        height: 50px;
       }
       .custom-loader {
     animation: loader 1s infinite;
