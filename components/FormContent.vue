@@ -5,10 +5,10 @@
         class="form-image"
         :lazy-src="require('@/assets/images/logo.png?lqip')"
         height="auto"
-        width="300"
+        width="200"
         :src="require('@/assets/images/logo.png?webp')"
       />
-      <h5>Start Investing with banxso</h5>
+      <h5>Start Investing Now!</h5>
     </div>
     <hr>
     <div>
